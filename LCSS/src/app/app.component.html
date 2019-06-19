@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">Games</a></li>
+    <li role="presentation"><a href="#">Categories</a></li>
+</ul>
+
+<div class="jumbotron">
+    <h1>GoodGames</h1>
+    <p>Catching the trend and experiencing the best in the world of games!</p>
+</div>
+
+<app-game *ngFor="let game of games, let i = index" [image]="i" [game]="game"></app-game>
