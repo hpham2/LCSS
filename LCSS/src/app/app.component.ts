@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FecthDataService } from './fecth-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,20 +6,8 @@ import { FecthDataService } from './fecth-data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  games: any;
 
-  constructor(
-    private fetchDataService: FecthDataService
-  ) { }
+  constructor( ) { }
 
-  ngOnInit() {
-    this.fetchDataService.getData()
-      .then(data => this.games = data).
-      catch(error => this.games = [
-        {
-          'name': 'Error',
-          'description': 'error'
-        }
-      ]);
-  }
+  ngOnInit() { }
 }

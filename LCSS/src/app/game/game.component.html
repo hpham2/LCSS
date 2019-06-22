@@ -10,8 +10,8 @@
         <h3>{{ name }}</h3>
         <p>{{ description }}</p>
         <p>
-          <a href="#" class="btn btn-primary" role="button" style="margin-right: 10px;">Play game</a> 
-          <a href="#" class="btn btn-default" role="button">Read more</a>
+          <a *ngIf="game !== undefined" href="#" class="btn btn-primary" role="button" style="margin-right: 10px;" routerLink="{{gameUrl}}">Play game</a> 
+          <a *ngIf="game !== undefined" href="#" class="btn btn-default" role="button"  routerLink="{{gameUrl}}">Read more</a>
         </p>
       </div>
     </div>
