@@ -16,4 +16,7 @@
       </div>
     </div>
   </div>
+  <div *ngIf="game === undefined" class="col-xs-6 col-md-6">
+    <app-comment [comments]="comments"></app-comment>
+  </div>
 </div>

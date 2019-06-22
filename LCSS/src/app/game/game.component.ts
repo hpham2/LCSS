@@ -14,6 +14,7 @@ export class GameComponent implements OnInit {
   description: string;
   id: string;
   gameUrl: string;
+  comments;
 
   constructor(private route: ActivatedRoute, private router: Router, private fetchGame: FecthDataService) { }
 
@@ -23,6 +24,8 @@ export class GameComponent implements OnInit {
       this.fetchGame.getGame(id).then(game => {
         this.name = game['name'];
         this.description = game['description'];
+        this.comments = game['comments']
+        console.log(this.comments)
       });
     } else {
       this.name = this.game.name;
