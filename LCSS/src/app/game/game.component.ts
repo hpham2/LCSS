@@ -22,10 +22,10 @@ export class GameComponent implements OnInit {
     if (this.game === undefined) {
       const id = this.route.snapshot.params.id;
       this.fetchGame.getGame(id).then(game => {
+        this.id = game['id'];
         this.name = game['name'];
         this.description = game['description'];
-        this.comments = game['comments']
-        console.log(this.comments)
+        this.comments = game['comments'];
       });
     } else {
       this.name = this.game.name;

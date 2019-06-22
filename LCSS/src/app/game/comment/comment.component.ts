@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FecthDataService } from '../../fecth-data.service';
 
 @Component({
   selector: 'app-comment',
@@ -7,11 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
   @Input() comments;
-  com;
+  @Input() gameId;
 
-  constructor() { }
+  constructor( private service: FecthDataService ) { }
 
   ngOnInit() {
   }
 
+  postComment(comment) {
+    this.service.postComment(this.gameId, comment);
+  }
 }

@@ -1,6 +1,6 @@
 
-<div>
-  <div class="col-xs-6 col-md-3">
+<div [ngStyle]="{'margin-left':game === undefined ? '10%' : null }">
+  <div class="col-xs-6 col-md-3 center">
     <div class="thumbnail" style="width: 100%;">
       <img *ngIf="(image + 1) % 4 == 1" src="../../assets/PUBG.jpg">
       <img *ngIf="(image + 1) % 4 == 2" src="../../assets/mario.jpg">
@@ -17,6 +17,6 @@
     </div>
   </div>
   <div *ngIf="game === undefined" class="col-xs-6 col-md-6">
-    <app-comment [comments]="comments"></app-comment>
+    <app-comment [comments]="comments" [gameId]="id"></app-comment>
   </div>
 </div>
