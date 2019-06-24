@@ -1,10 +1,15 @@
+<div class="alert alert-info" role="alert">
+  <span id="rating-header">Rating</span> 
+  <app-rating [gameId]=gameId></app-rating>
+</div>
+
 <div class="alert alert-info" role="alert">Comments</div>
+
 <ul class="list-group">
   <li *ngFor="let comment of comments" class="list-group-item">{{comment}}</li>
 </ul>
+
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1" (click)="postComment(input.value)">Comment</span>
   <input #input type="text" class="form-control" placeholder="Comment here..." aria-describedby="basic-addon1">
 </div>
-<!-- <button style="margin-top: 10px" type="button" class="btn btn-default" (click)="postComment(input.value)">Comment</button> -->
-

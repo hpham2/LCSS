@@ -45,4 +45,21 @@ export class FecthDataService {
     return data;
   }
 
+  async postRating(gameId: number, rating: number) {
+    let headers: HttpHeaders = new HttpHeaders();
+    // Nếu cần header thì ông chỉnh ở đây
+    // headers = headers.append('Access-Control-Allow-Origin', '*');
+
+    console.log('game id: ' + gameId);
+    console.log('rating: ' + rating);
+
+    // ông muốn post cái gì thì ghi vào đây
+    const postObject = {
+
+    };
+
+    const data = await this.http.post('./assets/apiTest.1.json', postObject).toPromise();
+    return data;
+  }
+
 }

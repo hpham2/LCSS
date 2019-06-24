@@ -1,5 +1,5 @@
-<span id="1" (click)="onClick($event)" class="fa fa-star" [ngClass]="color(1)"></span>
-<span id="2" (click)="onClick($event)" class="fa fa-star" [ngClass]="color(2)"></span>
-<span id="3" (click)="onClick($event)" class="fa fa-star" [ngClass]="color(3)"></span>
-<span id="4" (click)="onClick($event)" class="fa fa-star" [ngClass]="color(4)"></span>
-<span id="5" (click)="onClick($event)" class="fa fa-star" [ngClass]="color(5)"></span>
+<span id="1" (mouseover)="changeColor(1)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(1)"></span>
+<span id="2" (mouseover)="changeColor(2)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(2)"></span>
+<span id="3" (mouseover)="changeColor(3)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(3)"></span>
+<span id="4" (mouseover)="changeColor(4)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(4)"></span>
+<span id="5" (mouseover)="changeColor(5)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(5)"></span>
