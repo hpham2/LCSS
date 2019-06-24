@@ -5,3 +5,10 @@
 .input-group {
     margin-bottom: 20px;
 }
+
+.input-group-addon {
+    background-color: rgb(22, 54, 240);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
