@@ -41,7 +41,7 @@ export class FecthDataService {
 
     };
 
-    const data = await this.http.post('./assets/apiTest.1.json', postObject);
+    const data = await this.http.post('./assets/apiTest.1.json', postObject).toPromise();
     return data;
   }
 

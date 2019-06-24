@@ -15,6 +15,7 @@ export class GameComponent implements OnInit {
   id: string;
   gameUrl: string;
   comments;
+  rate: number;
 
   constructor(private route: ActivatedRoute, private router: Router, private fetchGame: FecthDataService) { }
 
@@ -26,12 +27,15 @@ export class GameComponent implements OnInit {
         this.name = game['name'];
         this.description = game['description'];
         this.comments = game['comments'];
+        this.image = 0;
+        this.rate = game ['rate'];
       });
     } else {
       this.name = this.game.name;
       this.description = this.game.description;
       this.id = this.game.id.toLocaleString();
       this.gameUrl = '/game/' + this.id;
+      this.rate = this.game.rate;
     }
   }
 }

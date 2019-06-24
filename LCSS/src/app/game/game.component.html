@@ -1,6 +1,6 @@
 
-<div [ngStyle]="{'margin-left':game === undefined ? '10%' : null }">
-  <div class="col-xs-6 col-md-3 center">
+<div [ngStyle]="{'margin-left':game === undefined ? '5%' : null }">
+  <div class="col-xs-6 col-md-3">
     <div class="thumbnail" style="width: 100%;">
       <img *ngIf="(image + 1) % 4 == 1" src="../../assets/PUBG.jpg">
       <img *ngIf="(image + 1) % 4 == 2" src="../../assets/mario.jpg">
@@ -8,6 +8,7 @@
       <img *ngIf="(image + 1) % 4 == 0" src="../../assets/mario.jpg">
       <div class="caption">
         <h3>{{ name }}</h3>
+        <app-rating [rate]=rate></app-rating>
         <p>{{ description }}</p>
         <p>
           <a *ngIf="game !== undefined" href="#" class="btn btn-primary" role="button" style="margin-right: 10px;" routerLink="{{gameUrl}}">Play game</a> 

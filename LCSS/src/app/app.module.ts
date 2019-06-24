@@ -8,6 +8,7 @@ import { GameComponent } from './game/game.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AllGamesComponent } from './all-games/all-games.component';
 import { CommentComponent } from './game/comment/comment.component';
+import { RatingComponent } from './game/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CommentComponent } from './game/comment/comment.component';
     GameComponent,
     AllGamesComponent,
     CommentComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,

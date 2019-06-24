@@ -16,6 +16,11 @@ export class CommentComponent implements OnInit {
   }
 
   postComment(comment) {
-    this.service.postComment(this.gameId, comment);
+    this.service.postComment(this.gameId, comment)
+      .then(data => {
+        console.log(data);
+        //push to update
+      })
+      .catch(error => console.error(error));
   }
 }
