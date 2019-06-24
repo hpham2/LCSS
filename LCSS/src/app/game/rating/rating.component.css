@@ -2,6 +2,10 @@
     color: orange;
 }
 
-.hover:hover {
+.star {
+  margin-right: 15px;
+}
+
+.star:hover {
   cursor: pointer;
 }

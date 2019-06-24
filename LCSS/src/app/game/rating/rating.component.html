@@ -1,5 +1,10 @@
-<span id="1" (mouseover)="changeColor(1)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(1)"></span>
-<span id="2" (mouseover)="changeColor(2)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(2)"></span>
-<span id="3" (mouseover)="changeColor(3)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(3)"></span>
-<span id="4" (mouseover)="changeColor(4)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(4)"></span>
-<span id="5" (mouseover)="changeColor(5)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star hover" [ngClass]="color(5)"></span>
+<span id="1" (mouseover)="changeColor(1)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star star" [ngClass]="color(1)" 
+  [ngStyle]="{'transform': gameId !== undefined ? 'scale(2)' : null}"></span>
+<span id="2" (mouseover)="changeColor(2)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star star" [ngClass]="color(2)"
+  [ngStyle]="{'transform': gameId !== undefined ? 'scale(2)' : null}"></span>
+<span id="3" (mouseover)="changeColor(3)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star star" [ngClass]="color(3)"
+[ngStyle]="{'transform': gameId !== undefined ? 'scale(2)' : null}"></span>
+<span id="4" (mouseover)="changeColor(4)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star star" [ngClass]="color(4)"
+  [ngStyle]="{'transform': gameId !== undefined ? 'scale(2)' : null}"></span>
+<span id="5" (mouseover)="changeColor(5)" (mouseout)="resetColor()" (click)="onClick($event)" class="fa fa-star star" [ngClass]="color(5)"
+  [ngStyle]="{'transform': gameId !== undefined ? 'scale(2)' : null}"></span>
