@@ -11,7 +11,7 @@ export class FecthDataService {
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Access-Control-Allow-Origin', '*');
     // const data = await this.http.get('./assets/apiTest.json', { headers }).toPromise();
-    const data = await this.http.get('localhost:5000/api/games', { headers }).toPromise();
+    const data = await this.http.get('http://localhost:5000/api/games', { headers }).toPromise();
     return data;
   }
 
@@ -26,7 +26,7 @@ export class FecthDataService {
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Access-Control-Allow-Origin', '*');
     // const data = await this.http.get('./assets/apiTest.1.json', { headers }).toPromise();
-    const data = await this.http.get('localhost:5000/api/game/id', { headers }).toPromise();
+    const data = await this.http.get(`http://localhost:5000/api/games/${id}`, { headers }).toPromise();
     return data;
     return null;
   }
