@@ -34,7 +34,7 @@ export class GameComponent implements OnInit {
       this.name = this.game.name;
       this.description = this.game.description;
       this.id = this.game.id.toLocaleString();
-      this.gameUrl = '/game/' + this.id;
+      this.gameUrl = '/games/' + this.id;
       this.rate = this.game.rate;
     }
   }

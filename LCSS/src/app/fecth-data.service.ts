@@ -28,7 +28,7 @@ export class FecthDataService {
     // const data = await this.http.get('./assets/apiTest.1.json', { headers }).toPromise();
     const data = await this.http.get(`http://localhost:5000/api/games/${id}`, { headers }).toPromise();
     return data;
-    return null;
+    // return null;
   }
 
   async postComment(gameId: number, comment: string) {
