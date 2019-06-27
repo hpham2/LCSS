@@ -10,7 +10,8 @@ export class FecthDataService {
   async getAllGames() {
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Access-Control-Allow-Origin', '*');
-    const data = await this.http.get('./assets/apiTest.json', { headers }).toPromise();
+    // const data = await this.http.get('./assets/apiTest.json', { headers }).toPromise();
+    const data = await this.http.get('localhost:5000/api/games', { headers }).toPromise();
     return data;
   }
 
@@ -24,8 +25,10 @@ export class FecthDataService {
 
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Access-Control-Allow-Origin', '*');
-    const data = await this.http.get('./assets/apiTest.1.json', { headers }).toPromise();
+    // const data = await this.http.get('./assets/apiTest.1.json', { headers }).toPromise();
+    const data = await this.http.get('localhost:5000/api/game/id', { headers }).toPromise();
     return data;
+    return null;
   }
 
   async postComment(gameId: number, comment: string) {
@@ -41,8 +44,9 @@ export class FecthDataService {
 
     };
 
-    const data = await this.http.post('./assets/apiTest.1.json', postObject).toPromise();
+    const data = await this.http.post('', postObject).toPromise();
     return data;
+    // return null;
   }
 
   async postRating(gameId: number, rating: number) {
@@ -58,7 +62,7 @@ export class FecthDataService {
 
     };
 
-    const data = await this.http.post('./assets/apiTest.1.json', postObject).toPromise();
+    const data = await this.http.post('', postObject).toPromise();
     return data;
   }
 
