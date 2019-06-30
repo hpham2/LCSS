@@ -20,6 +20,7 @@ export class CommentComponent implements OnInit {
       .then(data => {
         console.log(data);
         // push to update
+        this.comments.push(comment);
       })
       .catch(error => console.error(error));
   }
